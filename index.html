@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toon Character</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      margin: 0;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: #ff6f61;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      border-bottom: 5px solid #fff176;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0px #333;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    nav {
+      background: #fff176;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6f61;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.4s;
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    .card:hover {
+      transform: perspective(1000px) rotateY(10deg) scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-bottom: 4px solid #ff6f61;
+    }
+    .card h3 {
+      margin: 12px 0;
+      color: #ff6f61;
+    }
+    section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #ff6f61;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 0px #fff176;
+    }
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+    .pay-btn {
+      display:inline-block;
+      margin-top:15px;
+      padding:12px 25px;
+      background:#28a745;
+      color:white;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      transition: 0.3s;
+    }
+    .pay-btn:hover {
+      background:#218838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🎨 Toon Character
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#payment">Payments</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300.png?text=Toon+1" alt="Toon 1">
+      <h3>Toon Hero</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300.png?text=Toon+2" alt="Toon 2">
+      <h3>Funny Toon</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300.png?text=Toon+3" alt="Toon 3">
+      <h3>Cartoon Girl</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300.png?text=Toon+4" alt="Toon 4">
+      <h3>Crazy Toon</h3>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>🎭 Toon Character ek fun website hai jaha aapko cool aur funky cartoon characters milte hain.<br>
+    Har din naye toon heroes aur funny faces add kiye jaate hain.</p>
+  </section>
+
+  <!-- Payment Section -->
+  <section id="payment" style="background:#fff176;">
+    <h2>💳 Payment Options</h2>
+    <p>Aap hamare Toon Characters ke premium packs kharidne ke liye payment kar sakte hain:</p>
+
+    <!-- PayPal Button (optional) -->
+    <a href="https://www.paypal.com/paypalme/yourid" target="_blank" 
+       style="display:inline-block; margin:10px; padding:12px 25px; 
+              background:#003087; color:white; border-radius:10px; 
+              text-decoration:none; font-weight:bold;">
+      🅿️ Pay with PayPal
+    </a>
+
+    <!-- UPI Payment -->
+    <div style="margin-top:30px;">
+      <h3>📲 Pay via UPI</h3>
+      <p>UPI ID: <b>ashik.chapdahake@ybl</b></p>
+      <a href="upi://pay?pa=ashik.chapdahake@ybl&pn=Ashik%20Chapdahake&cu=INR" 
+         class="pay-btn">
+        ✅ Pay Now (UPI Apps)
+      </a>
+      <br><br>
+      <img src="https://via.placeholder.com/200x200.png?text=UPI+QR" 
+           alt="UPI QR" 
+           style="border:5px solid #ff6f61; border-radius:15px;">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: toon@character.com</p>
+    <p>📱 Instagram: @tooncharacter</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Toon Character | All Rights Reserved
+  </footer>
+</body>
+</html>
